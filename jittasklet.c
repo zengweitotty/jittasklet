@@ -70,7 +70,8 @@ static int jit_tasklet_fn(char* buf,char** start,off_t offset,int len,int *eof,v
 	if(signal_pending(current))
 		return -ERESTARTSYS;
 	tasklet_kill(&jitTasklet->task);
-	*start = buf;
+	//*start = buf;
+	*eof = 1;
 	jitTasklet->len = jitTasklet->buf - buf;
 	return jitTasklet->len;
 }
