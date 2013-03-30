@@ -1,0 +1,1 @@
+cmd_/work/driver_program/jittasklet/jittasklet.ko := ld -r -m elf_i386 -T /usr/src/linux-2.6.38/scripts/module-common.lds --build-id  -o /work/driver_program/jittasklet/jittasklet.ko /work/driver_program/jittasklet/jittasklet.o /work/driver_program/jittasklet/jittasklet.mod.o
